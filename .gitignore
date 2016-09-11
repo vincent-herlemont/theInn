@@ -1,0 +1,11 @@
+.bash*
+.cache
+.cloud-locale-test.skip
+*.swp
+*.swo
+.profile
+.ssh/
+.viminfo
+.config/
+.gitconfig
+.vim/

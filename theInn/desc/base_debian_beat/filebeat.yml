@@ -1,0 +1,20 @@
+# This file is an example 
+# you need to overwrite it on each services
+filebeat:
+ prospectors:
+  - 
+   paths:
+    - /<your path>
+   input_type: log
+   registry_file: /var/lib/filebeat/registry
+output:
+ elasticsearch:
+  hosts: ["elasticsearch:9200"]
+  template:
+   path: "filebeat.template.json"
+   overwrite: true
+shipper:
+logging:
+ files:
+  rotateeverybytes: 10485760 # = 10MB
+  keepfiles: 7
