@@ -1,7 +1,8 @@
-FROM theinn_base_debian_dev
+FROM theinn_base_debian
+
+ENTRYPOINT [ "/bin/bash -i" ]
 
 RUN apt-get update -y && \
-    apt-get install -y curl && \
     curl -L -O https://download.elastic.co/beats/filebeat/filebeat_1.3.0_amd64.deb && \
     dpkg -i filebeat_1.3.0_amd64.deb && \
     # clean
@@ -14,6 +15,3 @@ RUN cp /etc/filebeat/filebeat.template.json /etc/filebeat/filebeat.template.json
     cp /etc/filebeat/filebeat.yml /etc/filebeat/filebeat.yml_back 
 
 COPY ./filebeat.yml /etc/filebeat/filebeat.yml
-
-
-ENTRYPOINT [ "/bin/bash" ]

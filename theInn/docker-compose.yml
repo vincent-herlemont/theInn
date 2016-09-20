@@ -1,9 +1,15 @@
 version: '2'
 services:
 
+# The good base
+ base_debian:
+  build: ./desc/base_debian
+
 # ELK
  base_debian_java8: 
   build: ./desc/base_debian_java8
+  depends_on:
+   - base_debian
 # Log stash is useless beacause it's replace by beat 
 # logstash:
 #  build: ./desc/logstash
@@ -15,13 +21,11 @@ services:
    - base_debian_java8
 
 # Stranges things ...
- base_debian_dev: 
-  build: ./desc/base_debian_dev
  base_debian_beat: 
   build: ./desc/base_debian_beat
-  depends_on: 
-  - base_debian_dev
-  - elasticsearch
+  depends_on:
+   - base_debian
+   - elasticsearch
  base_debian_nginx: 
   build: ./desc/base_debian_nginx
   depends_on:
