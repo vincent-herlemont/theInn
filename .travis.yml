@@ -1,0 +1,14 @@
+sudo: required
+
+os:
+  - linux
+
+services:
+  - docker
+
+before_script: 
+  - chmod +x ./inn_bashrc.sh && chmod -R +x ./util
+  - echo "source $(pwd)/inn_bashrc.sh" >> ~/.bashrc
+  - source ~/.bashrc
+
+script: ./util/build.sh

@@ -1,0 +1,59 @@
+version: '2'
+services:
+  
+  kibana: 
+    image: kibana:5.0.0-alpha5
+    networks:
+      monitoring:
+        aliases:
+          - kibana
+    ports: 
+      - 5601:5601
+    depends_on: 
+      - elasticsearch
+    logging:
+      driver: json-file
+      options:
+        max-size: "1m"
+        max-file: "5"
+
+  elasticsearch: 
+    image: elasticsearch:5.0.0-alpha5
+    command: "-E bootstrap.ignore_system_bootstrap_checks=true" # TODO check on beta/realease 5
+    environment:
+      ES_JAVA_OPTS: "-Xms1g -Xmx1g"
+    networks: 
+      monitoring:
+        aliases:
+          - elasticsearch
+    logging:
+      driver: json-file
+      options:
+        max-size: "1m"
+        max-file: "5"
+
+  # TODO : https://hub.docker.com/_/logstash/
+  logstash:
+    image: logstash:5.0.0-alpha5-1
+    networks:
+      monitoring:
+        aliases:
+          - logstash
+    depends_on: 
+      - elasticsearch
+    volumes: 
+      - ./logstash/config-dir:/config-dir:ro
+    command: -f /config-dir/logstash.conf --config.reload.automatic
+    ports:
+      - 3002:3002 # http
+      - 3001:3001 # tcp
+      - 3000:3000 # udp
+    logging:
+      driver: json-file
+      options:
+        max-size: "1m"
+        max-file: "5"
+
+networks:
+  monitoring:
+    driver: "bridge"

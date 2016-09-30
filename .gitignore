@@ -3,10 +3,11 @@
 .cloud-locale-test.skip
 *.swp
 *.swo
-/*.DS_Store
+*.DS_Store
 .profile
 .ssh/
 .viminfo
 .config/
 .gitconfig
 .vim/
+*.env

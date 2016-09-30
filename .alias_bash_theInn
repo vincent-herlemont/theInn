@@ -1,5 +1,0 @@
-#!/bin/bash
-export THEINN='~'
-alias inn.rmai=$THEINN'/rmai.sh'
-alias inn.rmac=$THEINN'/rmac.sh'
-alias inn.in=$THEINN'/in.sh'
