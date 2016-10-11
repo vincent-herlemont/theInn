@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "bas_debian"
+echo "debian-dev"

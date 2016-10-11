@@ -7,12 +7,41 @@ services:
       projet-1:
         aliases:
           - front
-    ports:
-      - ${SIMPLE_NGINX_EXTERNAL_PORT}:80
     command: "bash-tail"
     volumes:
       - ./front/etc/nginx:/etc/nginx:ro
       - ./front/var/www/app:/var/www/app
+    logging:
+      driver: json-file
+      options:
+        max-size: "1m"
+        max-file: "5"
+
+  back:
+    image: simple-nginx
+    networks:
+      projet-1:
+        aliases:
+          - back
+    command: "bash-tail"
+    volumes:
+      - ./back/etc/nginx:/etc/nginx:ro
+      - ./back/var/www:/var/www
+    logging:
+      driver: json-file
+      options:
+        max-size: "1m"
+        max-file: "5"
+  back-php-fpm:
+    image: simple-php-fpm
+    networks:
+      projet-1:
+        aliases:
+          - back-php-fpm
+    command: "bash-tail"
+    volumes:
+      - ./back/etc/php5:/etc/php5:ro
+      - ./back/var/www:/var/www
     logging:
       driver: json-file
       options:
