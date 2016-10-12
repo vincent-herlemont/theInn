@@ -1,0 +1,9 @@
+version: '2'
+services:
+  
+  front:
+    ports:
+      - ${FRONT_EXTERNAL_PORT}:80
+  back:
+    ports:
+      - ${BACK_EXTERNAL_PORT}:80

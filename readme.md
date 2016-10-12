@@ -6,12 +6,44 @@
 - [x] ssh to ssh docker (base)
 - [x] private registry (distribution) docker
 - [x] travis for build exec ./build and test bash environement
-  - [ ] make more test for each command in bash 
-- [ ] simple nginx / php ?
-- [ ] simple project ?
+	- [ ] make more test for each command in bash 
+- [x] haproxy
+- [x] project-1
+	- [x] front
+		- [x] nginx
+	- [x] back
+		- [x] nginx
+		- [x] php-fpm
+	- front and back container in same port 80.
+		- [x] haproxy mutiple host
+- [ ] project-2
+	- [ ] api
+		- [ ] nginx
+		- [ ] php-fpm
+	- [ ] link to back container of project-1
+
+- [ ] apache serveur web
 - [ ] phpuint test on docker
 - [ ] phpuint test docker/ jenkins.
-- [ ] haproxy mutiple host
+- [ ] reduce weight of images
+- [ ] plug [ ] project-1 - [ ] project-2 to elk
+
+---- issues ----
+- simple-php-fpm
+	- [ ] log in simple-php-fpm in direcly on /var/log
+	- [ ] on start : NOTICE: systemd monitor interval set to 10000ms
+
+-- improvement --
+- elk
+	- [ ] the 5.0.0-rc1 is available
+		- [ ] implementation
+		- [ ] test
+- simple-php-fpm
+	- [ ] make and separate tow version
+		- [ ] php 5.6 (simple-php56-fpm)
+		- [ ] php 7 (simple-php7-fpm)
+- haproxy
+	- [ ] log
 
 ## Requirement
 

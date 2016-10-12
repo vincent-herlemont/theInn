@@ -19,3 +19,4 @@ dockerBuildBase debian-java8
 # Build simple
 dockerBuildSimple nginx
 dockerBuildSimple php-fpm
+dockerBuildSimple haproxy
