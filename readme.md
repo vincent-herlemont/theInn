@@ -16,6 +16,11 @@
 		- [x] php-fpm
 	- front and back container in same port 80.
 		- [x] haproxy mutiple host
+		- [x] full ssl for external network and http for private network
+	- readme
+		- [ ] schema simple
+		- [ ] with haproxy and full ssl !
+
 - [ ] project-2
 	- [ ] api
 		- [ ] nginx
