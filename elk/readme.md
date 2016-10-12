@@ -19,6 +19,11 @@ Input logstash :
 UI Kibana : 
 - http : 5601
 
+You can configure it on your .env
+
+:warning: rc1 you needto increase you virtual memory of your VM (```sysctl -w vm.max_map_count=262144```). Not sure is usfull on bar metal machine.
+
+
 ### Information
 
 #### Log rotation
@@ -31,6 +36,16 @@ For all services (elasticsearch,logstash,kibana) :
 
 All services are in a specificate network *%monitoring*  usually *elk_monitoring*
 
+
+### Run
+
+```
+# Init your environement configuration
+cp .env.example .env
+
+# Start elk
+docker-compose up
+```
 
 ### Test
 
