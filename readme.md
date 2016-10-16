@@ -8,6 +8,7 @@
 - [x] travis for build exec ./build and test bash environement
 	- [ ] make more test for each command in bash 
 - [x] haproxy
+- [x] mariadb
 - [x] project-1
 	- [x] front
 		- [x] nginx
@@ -25,6 +26,7 @@
 	- [ ] api
 		- [ ] nginx
 		- [ ] php-fpm
+	- [ ] mariadb
 	- [ ] link to back container of project-1
 
 - [ ] apache serveur web
@@ -39,6 +41,11 @@
 	- [ ] on start : NOTICE: systemd monitor interval set to 10000ms
 
 -- improvement --
+- [ ] copy defaults configuration on simple project
+	- [x] mariadb
+	- [ ] nginx
+	- [ ] php-fpm
+	- [ ] haproxy
 - elk
 	- [ ] the 5.0.0-rc1 is available
 		- [ ] implementation

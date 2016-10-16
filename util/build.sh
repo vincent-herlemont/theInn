@@ -20,3 +20,4 @@ dockerBuildBase debian-java8
 dockerBuildSimple nginx
 dockerBuildSimple php-fpm
 dockerBuildSimple haproxy
+dockerBuildSimple mariadb

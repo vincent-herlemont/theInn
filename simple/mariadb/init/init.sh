@@ -1,0 +1,1 @@
+mysql -u root -proot < /init/user.sql 
