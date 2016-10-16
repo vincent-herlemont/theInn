@@ -1,6 +1,6 @@
 version: '2'
 services:
   
-  front:
+  laravel:
     ports:
       - ${LARAVEL_EXTERNAL_PORT}:80

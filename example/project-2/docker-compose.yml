@@ -1,0 +1,42 @@
+version: '2'
+services: 
+
+  laravel:
+    image: simple-nginx
+    networks:
+      projet-2:
+        aliases:
+          - laravel
+    command: "bash-tail"
+    volumes:
+      - ./laravel/etc/nginx:/etc/nginx:ro
+      - site:/var/www/
+    logging:
+      driver: json-file
+      options:
+        max-size: "1m"
+        max-file: "5"
+
+  laravel-php-fpm:
+    image: simple-php-fpm
+    networks:
+      projet-2:
+        aliases:
+          - laravel-php-fpm
+    command: "bash-tail"
+    volumes:
+      - ./laravel/etc/php5:/etc/php5:ro
+      - site:/var/www
+      - ./laravel/install-laravel.sh:/install-laravel.sh
+    logging:
+      driver: json-file
+      options:
+        max-size: "1m"
+        max-file: "5"
+
+networks:
+  projet-2:
+    driver: "bridge"
+
+volumes:
+  site:
