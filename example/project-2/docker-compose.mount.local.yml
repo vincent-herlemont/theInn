@@ -1,0 +1,14 @@
+version: '2'
+services:
+
+  laravel:
+    environment:
+      LOCAL_USER_ID: 1000
+    volumes:
+      - ./laravel/var/www:/var/www
+
+  laravel-php-fpm:
+    environment:
+      LOCAL_USER_ID: 1000
+    volumes:
+      - ./laravel/var/www:/var/www

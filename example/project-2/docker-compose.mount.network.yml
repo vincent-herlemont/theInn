@@ -1,0 +1,10 @@
+version: '2'
+services:
+
+  laravel:
+    volumes:
+      - site:/var/www/
+
+  laravel-php-fpm:
+    volumes:
+      - site:/var/www

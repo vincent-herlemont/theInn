@@ -23,9 +23,12 @@
 		- [ ] with haproxy and full ssl !
 
 - [ ] project-2
-	- [ ] api
-		- [ ] nginx
-		- [ ] php-fpm
+	- [x] laravel
+		- [x] nginx
+		- [x] php-fpm
+		- [x] use composer auto
+		- [x] config with host volume
+		- [x] config with network volume
 	- [ ] mariadb
 	- [ ] link to back container of project-1
 
@@ -51,6 +54,7 @@
 		- [ ] implementation
 		- [ ] test
 - simple-php-fpm
+	- [ ] composer
 	- [ ] make and separate tow version
 		- [ ] php 5.6 (simple-php56-fpm)
 		- [ ] php 7 (simple-php7-fpm)

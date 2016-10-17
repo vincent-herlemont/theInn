@@ -11,3 +11,4 @@
 .gitconfig
 .vim/
 *.env
+._*
