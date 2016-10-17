@@ -64,7 +64,7 @@
 ## Requirement
 
 - bash
-- docker
+- docker ```source <(curl -s https://get.docker.com/)```
 
 ## Process
 
