@@ -6,6 +6,8 @@
 - [x] ssh to ssh docker (base)
 - [x] private registry (distribution) docker
 - [x] travis for build exec ./build and test bash environement
+	- [x] test composer config in project-1
+	- [ ] test composer config in project-2
 	- [ ] make more test for each command in bash 
 - [x] haproxy
 - [x] mariadb

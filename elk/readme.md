@@ -12,12 +12,12 @@ You need more than *2gb* of virtual memory.
 You need three port available on your computeur:
 
 Input logstash :
--- http : 3002 
--- tcp  : 3001
--- udp  : 3000
+- http : 3002 
+- tcp  : 3001
+- udp  : 3000
 
 UI Kibana : 
--- http : 5601
+- http : 5601
 
 ### Information
 
