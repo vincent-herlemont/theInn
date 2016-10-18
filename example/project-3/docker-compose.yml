@@ -1,0 +1,28 @@
+version: '2'
+services:
+
+  mariadb:
+    image: simple-mariadb
+    networks:
+      project-3:
+        aliases:
+          - mariadb
+      project-2:
+        aliases:
+          - db
+    volumes:
+      - ./etc/mysql/conf.d:/etc/mysql/conf.d:ro
+      - ./init:/init:ro
+    command: "bash-tail"
+    logging:
+      driver: json-file
+      options:
+        max-size: "1m"
+        max-file: "5"
+
+networks:
+  project-3:
+    driver: "bridge"
+  project-2:
+    external:
+        name: ${COMPOSE_PROJECT_NAME}_project-2

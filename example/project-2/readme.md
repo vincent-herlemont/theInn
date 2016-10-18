@@ -12,14 +12,14 @@ You can set your uid (```echo $UID``` or ```id -u <your user name>```) in the ``
 
 ## Install laravel
 ```
-docker-compose -f docker-compose.yml -f docker-compose.external.yml -f docker-compose.mount.local.yml
+docker-compose -f docker-compose.yml -f docker-compose.external.yml -f docker-compose.mount.local.yml up
 chmod +x laravel.sh
 ./laravel.sh
 ```
 
 ## Up simple
 ```
-docker-compose -f docker-compose.yml -f docker-compose.external.yml -f docker-compose.mount.local.yml
+docker-compose -f docker-compose.yml -f docker-compose.external.yml -f docker-compose.mount.local.yml up
 ```
 
 
@@ -27,12 +27,12 @@ docker-compose -f docker-compose.yml -f docker-compose.external.yml -f docker-co
 
 ## Install laravel
 ```
-docker-compose -f docker-compose.yml -f docker-compose.external.yml -f docker-compose.mount.network.yml
+docker-compose -f docker-compose.yml -f docker-compose.external.yml -f docker-compose.mount.network.yml up
 chmod +x laravel.sh
 ./laravel.sh
 ```
 
 ## Up simple
 ```
-docker-compose -f docker-compose.yml -f docker-compose.external.yml -f docker-compose.mount.network.yml
+docker-compose -f docker-compose.yml -f docker-compose.external.yml -f docker-compose.mount.network.yml up
 ```

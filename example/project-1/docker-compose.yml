@@ -4,7 +4,7 @@ services:
   front:
     image: simple-nginx
     networks:
-      projet-1:
+      project-1:
         aliases:
           - front
     command: "bash-tail"
@@ -20,7 +20,7 @@ services:
   back:
     image: simple-nginx
     networks:
-      projet-1:
+      project-1:
         aliases:
           - back
     command: "bash-tail"
@@ -35,7 +35,7 @@ services:
   back-php-fpm:
     image: simple-php-fpm
     networks:
-      projet-1:
+      project-1:
         aliases:
           - back-php-fpm
     command: "bash-tail"
@@ -49,5 +49,5 @@ services:
         max-file: "5"
 
 networks:
-  projet-1:
+  project-1:
     driver: "bridge"

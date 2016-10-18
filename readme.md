@@ -31,9 +31,18 @@
 		- [x] use composer auto
 		- [x] config with host volume
 		- [x] config with network volume
-	- [ ] mariadb
-	- [ ] link to back container of project-1
+	- [x] adminer
+		- [x] nginx
+		- [x] php-fpm
+		- [x] connection with db in project-3
 
+- [x] project-3
+	- [x] mariadb
+	- [x] link to back container of project-2
+- [ ]
+	- link all project with haproxy host
+
+- [x] simple elasticsearch
 - [ ] apache serveur web
 - [ ] phpuint test on docker
 - [ ] phpuint test docker/ jenkins.

@@ -2,5 +2,5 @@
 /etc/init.d/nginx start 
 /etc/init.d/nginx status
 
-tail -f /var/log/nginx/error.log &
-tail -f /var/log/nginx/access.log &
+tail -f -n 0 /var/log/nginx/error.log &
+tail -f -n 0 /var/log/nginx/access.log &
