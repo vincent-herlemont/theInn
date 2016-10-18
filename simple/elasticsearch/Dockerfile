@@ -1,7 +1,7 @@
 # TODO :
 # - log / data configuration: https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-configuration.html
 # elasticsearch user log4j configuration login. Setup the limit and rotation log
-FROM theinn_base_debian_java8
+FROM debian-java8
 
 # install url
 RUN apt-get update -y && \

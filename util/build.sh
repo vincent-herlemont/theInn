@@ -21,3 +21,4 @@ dockerBuildSimple nginx
 dockerBuildSimple php-fpm
 dockerBuildSimple haproxy
 dockerBuildSimple mariadb
+dockerBuildSimple elasticsearch
