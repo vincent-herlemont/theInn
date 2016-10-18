@@ -1,4 +1,4 @@
-## ELK v5 (alpha)
+## ELK v5 (rc1)
 
 It's light configuration of elk build with official images.
 - https://hub.docker.com/_/elasticsearch/
