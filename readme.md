@@ -39,8 +39,9 @@
 - [x] project-3
 	- [x] mariadb
 	- [x] link to back container of project-2
-- [ ]
-	- link all project with haproxy host
+
+- [ ] project-4
+	- [ ] link all project with haproxy host
 
 - [x] simple elasticsearch
 - [ ] apache serveur web
