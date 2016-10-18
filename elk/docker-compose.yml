@@ -9,6 +9,8 @@ services:
           - kibana
     ports: 
       - ${KIBANA_UI}:5601
+    volumes:
+      - ./etc/kibana/kibana.yml:/etc/kibana/kibana.yml:ro
     depends_on: 
       - elasticsearch
     logging:
