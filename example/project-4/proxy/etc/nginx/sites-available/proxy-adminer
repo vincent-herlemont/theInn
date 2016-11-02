@@ -1,0 +1,12 @@
+server {
+	resolver 127.0.0.1:53 valid=30s;
+	
+	listen 80;
+	listen [::]:80;
+
+	server_name adminer;
+	
+	location / {
+		proxy_pass http://adminer/;
+	}	
+}

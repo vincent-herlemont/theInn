@@ -1,0 +1,12 @@
+server {
+	resolver 127.0.0.1:53 valid=30s;
+	
+	listen 80 default_server;
+	listen [::]:80 default_server;
+
+	server_name _ laravel;
+	
+	location / {
+		proxy_pass http://laravel/;
+	}	
+}

@@ -25,4 +25,4 @@ networks:
     driver: "bridge"
   project-2:
     external:
-        name: ${COMPOSE_PROJECT_NAME}_project-2
+      name: ${COMPOSE_PROJECT_NAME}_project-2

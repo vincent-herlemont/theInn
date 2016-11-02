@@ -1,0 +1,21 @@
+version: '2'
+services: 
+
+  laravel:
+    image: simple-nginx
+    networks:
+      project-4:
+        aliases:
+          - laravel
+
+  adminer:
+    image: simple-nginx
+    networks:
+      project-4:
+        aliases:
+          - adminer
+
+networks:
+  project-4:
+    external:
+      name: ${COMPOSE_PROJECT_NAME}_project-4

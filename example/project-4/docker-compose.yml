@@ -1,0 +1,23 @@
+version: '2'
+services: 
+
+  proxy-nginx:
+    image: simple-nginx
+    networks:
+      project-4:
+        aliases:
+          - proxy-nginx
+    ports:
+      - ${NGINXPROXY_EXTERNAL_PORT}:80
+    command: "bash-tail"
+    volumes:
+      - ./proxy/etc/nginx:/etc/nginx:ro
+    logging:
+      driver: json-file
+      options:
+        max-size: "1m"
+        max-file: "5"
+
+networks:
+  project-4:
+    driver: "bridge"

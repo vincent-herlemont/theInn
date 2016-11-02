@@ -12,6 +12,7 @@ RUN apt-get update -y && \
     mlocate \
     cron \
     ntpdate \
+    strace \
     git
 
 # add emoji (https://github.com/mrowa44/emojify)
